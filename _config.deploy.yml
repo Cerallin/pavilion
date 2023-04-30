@@ -1,0 +1,7 @@
+url: https://cerallin.github.io/pavilion
+root: /pavilion/
+
+deploy:
+- type: 'git'
+  repo: git@github.com:cerallin/pavilion
+  branch: gh-pages

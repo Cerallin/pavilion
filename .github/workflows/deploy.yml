@@ -39,16 +39,9 @@ jobs:
         npm install hexo-cli -g
         npm install
 
-    - name: Add config
-    - run: |
-        cat <<EOF >> .private.yml
-url: https://cerallin.github.io/pavilion
-root: /pavilion/
-deploy:
-- type: 'git'
-  repo: git@github.com:cerallin/pavilion
-  branch: gh-pages
-EOF
+    - name: Add deploy configuration
+      run: |
+        mv _config.deploy.yml .private.yml
 
     - name: Deploy
       run: |
