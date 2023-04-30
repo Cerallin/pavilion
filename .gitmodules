@@ -1,0 +1,3 @@
+[submodule "themes/hexo-theme-pavilion"]
+  path = themes/hexo-theme-pavilion
+  url = https://github.com/cerallin/hexo-theme-pavilion
