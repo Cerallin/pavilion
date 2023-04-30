@@ -1,0 +1,33 @@
+{
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "hexo --config _config.yml,.private.yml generate",
+    "clean": "hexo --config _config.yml,.private.yml clean",
+    "deploy": "hexo --config _config.yml,.private.yml deploy",
+    "server": "hexo --config _config.yml,.private.yml server"
+  },
+  "hexo": {
+    "version": "6.3.0"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.10.4",
+    "hexo": "^6.3.0",
+    "hexo-deployer-rsync": "^2.0.0",
+    "hexo-filter-fix-cjk-spacing": "0.0.5",
+    "hexo-filter-text-autospace": "^1.2.4",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-index": "^3.0.0",
+    "hexo-generator-seo-friendly-sitemap": "^0.2.1",
+    "hexo-renderer-markdown-it": "^7.0.0",
+    "hexo-renderer-pug": "^3.0.0",
+    "hexo-renderer-scss": "^1.2.0",
+    "hexo-server": "^3.0.0",
+    "hexo-util": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11"
+  }
+}

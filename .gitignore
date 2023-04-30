@@ -1,0 +1,9 @@
+.vscode/
+.env
+.private.yml
+_multiconfig.yml
+db.json
+*.log
+node_modules/
+public/
+.source_me
