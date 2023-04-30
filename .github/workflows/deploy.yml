@@ -31,6 +31,11 @@ jobs:
         npm i
         npm run build
 
+    - name: Modify font path
+      run: |
+        sed -i 's_/fonts/_/pavilion/fonts/_' \
+          themes/hexo-theme-pavilion/source/css/_defaults/fonts.scss
+
     - name: Setup Deploy Key
       env:
         HEXO_DEPLOY_KEY: ${{ secrets.SSH_KEY }}
