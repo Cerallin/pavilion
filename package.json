@@ -14,6 +14,7 @@
   "dependencies": {
     "bootstrap-icons": "^1.10.4",
     "hexo": "^6.3.0",
+    "hexo-deployer-git": "^4.0.0",
     "hexo-deployer-rsync": "^2.0.0",
     "hexo-filter-fix-cjk-spacing": "0.0.5",
     "hexo-filter-text-autospace": "^1.2.4",
