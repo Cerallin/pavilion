@@ -1,0 +1,178 @@
+@font-face {
+  font-family: ark-pixel-16;
+  src: url("/pavilion/fonts/ark-pixel-16px-proportional-zh_cn.woff2"); }
+
+@font-face {
+  font-family: ark-pixel-12;
+  src: url("/pavilion/fonts/ark-pixel-12px-proportional-zh_cn.woff2"); }
+
+@font-face {
+  font-family: ark-pixel-10;
+  src: url("/pavilion/fonts/ark-pixel-10px-proportional-zh_cn.woff2"); }
+
+.article {
+  width: 100%;
+  font-size: 18px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media (min-width: 768px) {
+    .article {
+      width: 750px; } }
+  @media (min-width: 1200px) {
+    .article {
+      width: 1000px; } }
+  .article .book-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .article .book-info .book-image {
+      position: relative;
+      z-index: -1;
+      width: 100%; }
+      .article .book-info .book-image img {
+        width: 100%;
+        height: 40vh;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 5px 5px 0 0; }
+        @media (min-width: 768px) {
+          .article .book-info .book-image img {
+            width: 750px; } }
+        @media (min-width: 1200px) {
+          .article .book-info .book-image img {
+            width: 1000px; } }
+        @media (min-width: 768px) {
+          .article .book-info .book-image img {
+            height: 60vh; } }
+        @media (min-width: 1200px) {
+          .article .book-info .book-image img {
+            height: 75vh; } }
+      .article .book-info .book-image::after {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 40vh;
+        background: linear-gradient(to bottom, transparent 0%, transparent 40%, #11325d 100%); }
+        @media (min-width: 768px) {
+          .article .book-info .book-image::after {
+            width: 750px; } }
+        @media (min-width: 1200px) {
+          .article .book-info .book-image::after {
+            width: 1000px; } }
+        @media (min-width: 768px) {
+          .article .book-info .book-image::after {
+            height: 60vh; } }
+        @media (min-width: 1200px) {
+          .article .book-info .book-image::after {
+            height: 75vh; } }
+    .article .book-info .book-info-box {
+      width: 90%;
+      margin-top: -15vh;
+      margin-bottom: 2em;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: end;
+      justify-items: stretch; }
+      .article .book-info .book-info-box .book-title {
+        font-size: 32px;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 0; }
+      .article .book-info .book-info-box .book-authors {
+        text-align: right;
+        line-height: 1; }
+        @media (max-width: 768px) {
+          .article .book-info .book-info-box .book-authors {
+            display: none; } }
+        .article .book-info .book-info-box .book-authors .author-name:nth-child(1) {
+          font-size: 21.6px; }
+        .article .book-info .book-info-box .book-authors .author-name {
+          margin-top: 0.25em; }
+  .article .cd-info {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30% 60%;
+    column-gap: 24px;
+    font-size: 16px; }
+    .article .cd-info .cd-cover {
+      grid-row: 1 / span 2;
+      justify-self: flex-start; }
+      .article .cd-info .cd-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+    .article .cd-info .cd-info-box .cd-title {
+      margin: 0;
+      font-weight: normal;
+      font-size: 24px; }
+    .article .cd-info .cd-info-box .cd-date {
+      margin-top: 1em;
+      margin-bottom: 0.5em; }
+    .article .cd-info .cd-artists {
+      padding-top: 1em;
+      align-self: end; }
+    @media (max-width: 768px) {
+      .article .cd-info {
+        display: flex;
+        flex-direction: column;
+        text-align: left; }
+        .article .cd-info .cd-artists {
+          align-self: auto;
+          line-height: 1.5; } }
+  .article .anime-info {
+    width: 90%;
+    margin: auto; }
+    .article .anime-info .anime-post {
+      display: flex;
+      justify-content: center; }
+      .article .anime-info .anime-post img {
+        width: 100%;
+        max-width: 400px; }
+  .article .article-contents {
+    width: 90%;
+    margin-top: 1.5em; }
+    .article .article-contents .article-title {
+      font-size: 24px;
+      margin-top: 2em;
+      margin-bottom: 1.5em; }
+  .article .article-contents[data-content-type="book"] .article-title,
+  .article .article-contents[data-content-type="comic"] .article-title {
+    margin-top: -3em;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 3.5em; }
+  .article .article-contents[data-content-type="book"] p,
+  .article .article-contents[data-content-type="comic"] p {
+    line-height: 1.5;
+    font-size: 18px;
+    margin-top: 1em; }
+  .article .reference {
+    width: 90%; }
+    .article .reference .reference-info {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      column-gap: 0.75em;
+      align-items: center;
+      line-height: 1; }
+      .article .reference .reference-info .reference-icon {
+        width: 24px;
+        height: 24px; }
+      .article .reference .reference-info + .reference-info {
+        margin-top: 0.5em; }
+  .article .footnotes,
+  .article .footnotes-sep {
+    max-width: 600px; }
+  .article .footnotes-sep {
+    margin-top: 2.5em;
+    margin-left: 0; }
+  .article .footnotes p {
+    font-size: 16px !important;
+    margin-top: 0 !important;
+    margin-block: 0;
+    margin-inline: 0; }

@@ -1,0 +1,224 @@
+@font-face {
+  font-family: ark-pixel-16;
+  src: url("/pavilion/fonts/ark-pixel-16px-proportional-zh_cn.woff2"); }
+
+@font-face {
+  font-family: ark-pixel-12;
+  src: url("/pavilion/fonts/ark-pixel-12px-proportional-zh_cn.woff2"); }
+
+@font-face {
+  font-family: ark-pixel-10;
+  src: url("/pavilion/fonts/ark-pixel-10px-proportional-zh_cn.woff2"); }
+
+.item-list {
+  width: 100%;
+  margin-top: 40px;
+  row-gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 24px 0;
+  justify-items: center; }
+  @media (min-width: 768px) {
+    .item-list {
+      grid-template-columns: repeat(3, 33.33333%); } }
+  @media (min-width: 960px) {
+    .item-list {
+      grid-template-columns: repeat(4, 25%); } }
+  @media (min-width: 1200px) {
+    .item-list {
+      grid-template-columns: repeat(5, 20%); } }
+  @media (min-width: 1600px) {
+    .item-list {
+      grid-template-columns: repeat(6, 16.66667%); } }
+  @media (min-width: 1960px) {
+    .item-list {
+      grid-template-columns: repeat(8, 12.5%); } }
+  .item-list .item-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
+
+.item-list[data-item-type="book"] .item-wrapper,
+.item-list[data-item-type="comic"] .item-wrapper {
+  width: 210px; }
+  .item-list[data-item-type="book"] .item-wrapper .item-image,
+  .item-list[data-item-type="comic"] .item-wrapper .item-image {
+    width: 210px;
+    height: 297px;
+    position: relative; }
+    @media (max-width: 768px) {
+      .item-list[data-item-type="book"] .item-wrapper .item-image,
+      .item-list[data-item-type="comic"] .item-wrapper .item-image {
+        width: 100%;
+        height: unset;
+        margin-left: auto;
+        margin-right: auto; } }
+    .item-list[data-item-type="book"] .item-wrapper .item-image img,
+    .item-list[data-item-type="comic"] .item-wrapper .item-image img {
+      object-fit: cover;
+      width: 210px;
+      height: 297px;
+      border-radius: 5px;
+      box-shadow: 3px 1px #365083; }
+      @media (max-width: 768px) {
+        .item-list[data-item-type="book"] .item-wrapper .item-image img,
+        .item-list[data-item-type="comic"] .item-wrapper .item-image img {
+          width: 100%;
+          height: 100%; } }
+  .item-list[data-item-type="book"] .item-wrapper .item-caption,
+  .item-list[data-item-type="comic"] .item-wrapper .item-caption {
+    display: none; }
+  .item-list[data-item-type="book"] .item-wrapper .item-image img:hover + .item-caption,
+  .item-list[data-item-type="book"] .item-wrapper .item-caption:hover,
+  .item-list[data-item-type="comic"] .item-wrapper .item-image img:hover + .item-caption,
+  .item-list[data-item-type="comic"] .item-wrapper .item-caption:hover {
+    width: 210px;
+    height: 297px;
+    border-radius: 5px;
+    box-shadow: 3px 1px #365083;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #000000bf; }
+    @media (max-width: 768px) {
+      .item-list[data-item-type="book"] .item-wrapper .item-image img:hover + .item-caption,
+      .item-list[data-item-type="book"] .item-wrapper .item-caption:hover,
+      .item-list[data-item-type="comic"] .item-wrapper .item-image img:hover + .item-caption,
+      .item-list[data-item-type="comic"] .item-wrapper .item-caption:hover {
+        width: 100%;
+        height: 100%; } }
+    .item-list[data-item-type="book"] .item-wrapper .item-image img:hover + .item-caption h2,
+    .item-list[data-item-type="book"] .item-wrapper .item-caption:hover h2,
+    .item-list[data-item-type="comic"] .item-wrapper .item-image img:hover + .item-caption h2,
+    .item-list[data-item-type="comic"] .item-wrapper .item-caption:hover h2 {
+      text-align: left;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-size: 32px;
+      font-family: 'ark-pixel-12';
+      font-weight: normal;
+      line-height: 1.25;
+      padding: 0.5em 0.25em;
+      margin-top: 0;
+      margin-bottom: 2em; }
+      @media (max-width: 768px) {
+        .item-list[data-item-type="book"] .item-wrapper .item-image img:hover + .item-caption h2,
+        .item-list[data-item-type="book"] .item-wrapper .item-caption:hover h2,
+        .item-list[data-item-type="comic"] .item-wrapper .item-image img:hover + .item-caption h2,
+        .item-list[data-item-type="comic"] .item-wrapper .item-caption:hover h2 {
+          font-size: 24px; } }
+  .item-list[data-item-type="book"] .item-wrapper .item-series,
+  .item-list[data-item-type="comic"] .item-wrapper .item-series {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .item-list[data-item-type="book"] .item-wrapper .item-series .item-series-box,
+    .item-list[data-item-type="comic"] .item-wrapper .item-series .item-series-box {
+      background-color: #736b9d;
+      height: 3px;
+      border-radius: 2px;
+      margin-bottom: 5px;
+      box-shadow: 3px 1px #365083; }
+      .item-list[data-item-type="book"] .item-wrapper .item-series .item-series-box:nth-child(1),
+      .item-list[data-item-type="comic"] .item-wrapper .item-series .item-series-box:nth-child(1) {
+        width: 80%; }
+      .item-list[data-item-type="book"] .item-wrapper .item-series .item-series-box:nth-child(2),
+      .item-list[data-item-type="comic"] .item-wrapper .item-series .item-series-box:nth-child(2) {
+        width: 90%; }
+      @media (max-width: 768px) {
+        .item-list[data-item-type="book"] .item-wrapper .item-series .item-series-box,
+        .item-list[data-item-type="comic"] .item-wrapper .item-series .item-series-box {
+          height: 2px; }
+          .item-list[data-item-type="book"] .item-wrapper .item-series .item-series-box:nth-child(1),
+          .item-list[data-item-type="comic"] .item-wrapper .item-series .item-series-box:nth-child(1) {
+            width: 70%; }
+          .item-list[data-item-type="book"] .item-wrapper .item-series .item-series-box:nth-child(2),
+          .item-list[data-item-type="comic"] .item-wrapper .item-series .item-series-box:nth-child(2) {
+            width: 80%; } }
+  @media (max-width: 768px) {
+    .item-list[data-item-type="book"] .item-wrapper,
+    .item-list[data-item-type="comic"] .item-wrapper {
+      width: calc(100% - 48px); }
+      .item-list[data-item-type="book"] .item-wrapper:nth-child(odd),
+      .item-list[data-item-type="comic"] .item-wrapper:nth-child(odd) {
+        margin-left: 24px; }
+      .item-list[data-item-type="book"] .item-wrapper:nth-child(even),
+      .item-list[data-item-type="comic"] .item-wrapper:nth-child(even) {
+        margin-right: 24px; } }
+
+.item-list[data-item-type="anime"] .item-wrapper {
+  align-items: center; }
+  .item-list[data-item-type="anime"] .item-wrapper .item-image {
+    width: 200px; }
+    .item-list[data-item-type="anime"] .item-wrapper .item-image img {
+      object-fit: cover;
+      width: 100%;
+      border: 1px solid #736b9d;
+      border-radius: 5px; }
+  @media (max-width: 768px) {
+    .item-list[data-item-type="anime"] .item-wrapper {
+      width: calc(100% - 48px); }
+      .item-list[data-item-type="anime"] .item-wrapper .item-image {
+        width: 100%; }
+      .item-list[data-item-type="anime"] .item-wrapper:nth-child(odd) {
+        margin-left: 24px; }
+      .item-list[data-item-type="anime"] .item-wrapper:nth-child(even) {
+        margin-right: 24px; } }
+
+@media (max-width: 1200px) {
+  .item-list[data-item-type="music"] {
+    grid-template-columns: repeat(3, 33.33333%); } }
+
+@media (max-width: 768px) {
+  .item-list[data-item-type="music"] {
+    grid-template-columns: 1fr 1fr; } }
+
+.item-list[data-item-type="music"] .item-wrapper * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative; }
+
+.item-list[data-item-type="music"] .item-wrapper *::before,
+.item-list[data-item-type="music"] .item-wrapper *::after {
+  content: '';
+  position: absolute;
+  box-sizing: border-box; }
+
+.item-list[data-item-type="music"] .item-wrapper .cd-case {
+  width: 220px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.1rem; }
+  .item-list[data-item-type="music"] .item-wrapper .cd-case::after {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0.15rem;
+    background: radial-gradient(circle at 50% 0%, #ffffff42 45%, #ffffffaa calc(45% + 0.1rem) 47%, transparent calc(47% + 0.1rem)) 20% 0%/10% 10% no-repeat, radial-gradient(circle at 50% 0%, #ffffff42 45%, #ffffffaa calc(45% + 0.1rem) 47%, transparent calc(47% + 0.1rem)) 85% 0%/10% 10% no-repeat, radial-gradient(circle at 50% 100%, #ffffff42 45%, #ffffffaa calc(45% + 0.1rem) 47%, transparent calc(47% + 0.1rem)) 20% 100%/10% 10% no-repeat, radial-gradient(circle at 50% 100%, #ffffff42 45%, #ffffffaa calc(45% + 0.1rem) 47%, transparent calc(47% + 0.1rem)) 85% 100%/10% 10% no-repeat, linear-gradient(#2e2e2e44, #2e2e2e44); }
+  @media (max-width: 768px) {
+    .item-list[data-item-type="music"] .item-wrapper .cd-case {
+      width: 165px;
+      height: 150px; } }
+
+.item-list[data-item-type="music"] .item-wrapper .ridge {
+  width: 9.4%;
+  height: 99.2%;
+  border-radius: 0.15rem;
+  background: blue;
+  background: linear-gradient(to right, #353535 10%, #222222 20%, #181818 35% 95%, #101010 95%) 97% 0/20% 100% no-repeat, repeating-linear-gradient(to right, #353535 0% 4%, #202020 6% 10.3%, #171717 11% 18%) 35% 0/70% 100% no-repeat, linear-gradient(#1e1e1e, #242424) 0 0/15% 100% no-repeat; }
+
+.item-list[data-item-type="music"] .item-wrapper .cd {
+  width: 89.2%;
+  height: 98.4%;
+  background: #323232;
+  box-shadow: inset -0.35rem 0.3rem #272727, inset 0 -0.15rem #272727; }
+  .item-list[data-item-type="music"] .item-wrapper .cd img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
