@@ -99,5 +99,36 @@
     "pageCount": 180,
     "publisher": "角川書店",
     "thumbnail": "https://images.isbndb.com/covers/94/97/9784047139497.jpg"
+  },
+  "9784049140286": {
+    "title": "つぐみ先輩の好きはちょっと変 (1)",
+    "authors": [
+      "きあま紀一"
+    ],
+    "date": "2021-10-27",
+    "description": "佐山次彦が入学式でつぐみ先輩に一目惚れしてから4年。才色兼備な彼女に4年越しの想いを告げたところなんと成功! そうして付き合い始めたつぐみ先輩は、めちゃくちゃかわいくて、ちょっと変わっていて――。",
+    "language": "ja",
+    "pageCount": 162,
+    "thumbnail": "https://m.media-amazon.com/images/I/71AkiNYd9CL.jpg"
+  },
+  "9784049145533": {
+    "title": "つぐみ先輩の好きはちょっと変 (2)",
+    "authors": [
+      "きあま紀一"
+    ],
+    "date": "2022-08-26",
+    "description": "一生懸命な君だから、伝えたい想い、大事な言葉。",
+    "language": "ja",
+    "pageCount": 176,
+    "thumbnail": "https://m.media-amazon.com/images/I/71KCwWoD8eL.jpg"
+  },
+  "9789864743322": {
+    "title": "100%的草莓: 草莓小褲褲!!",
+    "date": "2017",
+    "authors": [
+      "河下水希"
+    ],
+    "language": "zh-TW",
+    "thumbnail": "https://lain.bgm.tv/pic/cover/l/0d/7a/22798_fJUgt.jpg"
   }
 }
